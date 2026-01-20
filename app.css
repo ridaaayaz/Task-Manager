@@ -1,0 +1,313 @@
+
+.appear{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+body{
+    margin: 0;
+}
+
+.cover2{
+      background-color: rgb(238, 237, 243);
+    width: 100%;
+    min-height: 50vh; 
+    padding: 20px 10px; 
+    box-sizing: border-box;
+    position: relative; 
+}
+
+.cover{
+    background-image: url(images/background4.png);
+    z-index: -4;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    box-sizing: border-box;
+    background-size: cover;
+    
+}
+.show{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.navBar {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    justify-content: space-between;
+    align-items:center;
+    padding: 10px;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    
+}
+
+.task,
+.manager {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-shadow:   0 2px 6px rgba(0, 0, 0, 0.25),
+    0 0 12px rgba(255, 255, 255, 0.35);
+}
+
+.manager {
+    color: black
+}
+.headings {
+    font-family: "Roboto",  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-top: 40px;
+
+}
+
+.headings h4,
+h1 {
+    margin: 10px;
+}
+
+.headings h4 {
+    color: dimgray;
+    font-weight: 200;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    word-spacing: 8px;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+      flex: 1 1 200px;
+    max-width: 30%;
+    margin: 10px;
+    height: 10vh;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    box-shadow: 0px 0px 6px rgba(153, 161, 252, 0.4),
+    0px 0px 12px rgba(129, 81, 243, 0.5);
+    transition: transform 0.2s;
+    background-color: rgb(240, 247, 250);
+}
+
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 2px 10px 6px rgba(0, 0, 0,0.3);;
+}
+
+.heading {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #555;
+
+}
+
+.number {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+
+}
+
+.card-icon {
+    width: 60px;
+    margin-left: auto;
+}
+
+.title{
+    margin: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    font-size:16px;
+    font-family:"Roboto",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.duePri{
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.dueDate{
+    color: #3c3b3b;
+}
+.calendar{
+    width: 14px;
+}
+.taskCard.high-pri, .upcomingTask.high-pri{
+    border-left: 3px solid rgb(202, 88, 88);
+}
+
+.taskCard.medium-pri, .upcomingTask.medium-pri{
+     border-left: 3px solid rgb(212, 184, 69);
+}
+
+.taskCard.low-pri,.upcomingTask.low-pri{
+     border-left: 3px solid rgb(45, 165, 69);
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnsNavDiv{
+    display:flex;
+    justify-content: space-evenly;
+    gap: 6px;
+}
+
+.btnsNav{
+    border: none;
+    padding: 10px;
+    width: auto;
+    border-radius: 10px;
+    font-family:  'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 15px;
+    box-sizing: content-box;
+    background-color: white;
+    color:dimgrey
+}
+
+.Active{
+    background-color:rgb(85, 146, 246);
+    color: white;
+}
+
+
+#Dashboard:hover, #Analytics:hover, #viewTasks:hover{
+    cursor: pointer;
+      color: black;
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin-top: 70px;
+    gap: 60px;
+}
+
+.upcoming{
+     font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px;
+     font-family: 'Roboto',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.upcoming span{
+    font-size: 12px;
+}
+
+.other{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter',system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.action{
+    height: 30px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+    border-radius: 5px;
+     font-family: 'Reddit Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+     font-size: 13px;
+     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+     transition: transform 0.3s ease;
+     color: #3c3b3b;
+     background-color: white;
+}
+
+.action:hover{
+     background-color: rgb(85, 146, 246);
+    color: white;
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+
+
+#upcomingList{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #3c3b3b;
+}
+
+.upcomingTask{
+    min-height: 70px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 10px;
+    width: 96%;
+    background-color: white;
+}
+
+.priority.high{
+    color: red;
+}
+
+.priority.med{
+    color: rgb(174, 174, 36);
+}
+
+.priority.low{
+    color: green;
+}
+
+
+.action.manage{
+    background-color: rgb(85, 146, 246) ;
+    color: white;
+}
+
+.overdueAlert{
+    color: red;
+    align-self: flex-end;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+}
+
+.quote p{
+    font-size: 14px;
+    margin-top: 0px;
+}
+
+.quote h4{
+     margin-bottom: 10px;
+}
+.quote{
+    background: url(images/background3.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    background-size: cover;
+    border-radius: 10px;
+    padding: 0px 20px 5px 20px;
+    box-sizing: content-box;
+    align-self: center;
+    color: rgb(61, 59, 70);
+    font-family: 'Roboto','Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

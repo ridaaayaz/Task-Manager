@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Organizer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="analytics.css">
+
+</head>
+
+<body>
+     
+    <header>
+        <nav class="navBar">
+            <div class="logo">
+                <img src="images/logo.png" width="40px">
+                <h2><span class="task">Task</span><span class="manager"> Manager</span></h2>
+            </div>
+
+            <div class="btnsNavDiv">
+                <button id="Dashboard" class="btnsNav " onclick="location.href='dashboard.html'">🏠︎ Dashboard</button>
+                <button id="viewTasks" class="btnsNav" onclick="location.href='Tasks.html'">☑ Tasks</button>
+                <button id="Analytics" class="btnsNav Active"> Analytics</button>
+
+            </div>
+        </nav>
+    </header>
+    <div class="cover2">
+    <div class="headings appear">
+        <h1> Analytics </h1>
+        <h4>Gain insights into your productivity and task management</h4>
+    </div>
+    <div class="summary appear ">
+
+        <div class="cardA ">
+            <img src="images/completionRate.png" class="card-icon2">
+            <span class="number" id="rate">0</span>
+            <span class="heading2">Completion Rate</span>
+            <div class="heading">Overall Task Completion</div>
+        </div>
+
+        <div class="cardA completed">
+            <img src="images/complete2.png" class="card-icon2">
+            <span class="number" id="Completed">0</span>
+            <span class="heading2">Completed</span>
+            <div class="heading">Tasks marked as done</div>
+        </div>
+
+        <div class="cardA total">
+            <img src="images/totalTasks.png" class="card-icon2">
+            <span class="number" id="Total">0</span>
+            <span class="heading2">Tasks Created</span>
+            <div class="heading">Total tasks in your list</div>
+        </div>
+
+        <div class="cardA overdue">
+            <img src="images/priority.png" class="card-icon2">
+            <span class="number" id="urgent">0</span>
+            <span class="heading2">High Priority</span>
+            <div class="heading">Urgent tasks pending</div>
+        </div>
+
+    </div>
+
+
+
+    <div class="charts">
+
+        <div class="pieChart">
+            <h4 class="heading2">Task Completion</h4>
+            <canvas id="piechart"></canvas>
+        </div>
+        <div class="barChart appear">
+            <h4 class="heading2">Priority Distribution</h4>
+            <canvas id="barchart"></canvas>
+        </div>
+    </div>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="analytics.js"></script>
+</body>
+
+</html>

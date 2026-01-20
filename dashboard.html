@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navBar">
+            <div class="logo">
+                <img src="images/logo.png" width="40px">
+                <h2><span class="task">Task</span><span class="manager"> Manager</span></h2>
+            </div>
+
+            <div class="btnsNavDiv">
+                <button id="Dashboard" class="btnsNav Active">🏠︎ Dashboard</button>
+                <button id="viewTasks" class="btnsNav">☑ Tasks</button>
+                <button id="Analytics" class="btnsNav" onclick="location.href='analytics.html'"> Analytics</button>
+
+            </div>
+        </nav>
+    </header>
+    <div class="cover2">
+    <div class="headings appear">
+        <h1> Welcome to <span class="manager">Task Manager!</span></h1>
+        <h4>Manage your tasks and track your productivity</h4>
+    </div>
+    <div class="summary appear">
+        <div class="card total">
+            <div style="display: flex; flex-direction: column;">
+                <div class="heading">Total Tasks</div>
+                <span class="number" id="Total">0</span>
+            </div>
+            <img src="images/total.png" class="card-icon">
+        </div>
+        <div class="card completed">
+            <div style="display: flex; flex-direction: column;">
+                <div class="heading">Completed Tasks</div>
+                <span class="number" id="Completed">0</span>
+
+            </div>
+
+            <img src="images/complete.png" class="card-icon">
+        </div>
+        <div class="card pending">
+            <div style="display: flex; flex-direction: column;">
+                <div class="heading">Pending Tasks</div>
+                <span class="number" id="Pending">0</span>
+            </div>
+
+            <img src="images/pending.png" class="card-icon">
+
+        </div>
+        <div class="card overdue">
+            <div style="display: flex; flex-direction: column;">
+                <div class="heading">Overdue Tasks</div>
+                <div class="number" id="Overdue">0</div>
+            </div>
+
+            <img src="images/overdue.png" class="card-icon">
+        </div>
+
+
+        <div class="main">
+            <div class="upcoming">
+                <h3><img src="images/clock.png" width="15px"> Upcoming Tasks</h3>
+                <div id="upcomingList" class="appear"></div>
+
+
+            </div>
+            <div class="other">
+                <h4>Quick Actions</h4>
+                <div class="action manage" onclick="location.href='Tasks.html'">≔ Manage Tasks</div>
+                <div class="action" onclick="location.href='analytics.html'">⌕ View Analytics</div>
+                <br>
+                <div class="quote">
+                    <h4>Stay Productive</h4>
+                    <p>Break down large tasks into smaller, manageable steps. Focus on one task at a time to maximize
+                        efficiency.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

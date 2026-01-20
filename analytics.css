@@ -1,0 +1,78 @@
+.cardA{
+     flex: 1 1 200px;    
+    max-width: 21%;
+    height: 200px;
+     display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgb(243, 251, 248);
+    box-shadow: 1px 2px 4px rgba(0,0,0,0.3);
+    gap: 10px;
+    padding: 10px;
+    justify-content: center;
+    font-family: 'Roboto','Times New Roman', Times, serif;
+    transition: transform 0.4s linear;
+}
+
+
+.cover2{
+      background-color: rgb(224, 221, 239);
+    width: 100%;
+    min-height: 50vh; 
+    padding: 40px 20px; 
+    box-sizing: border-box;
+    position: relative; 
+}
+.cardA:hover{
+    transform: translateY(-10px);
+}
+
+.summary{
+    row-gap: 10px;
+}
+.card-icon2{
+  align-self: flex-start;
+  width: 30px;
+}
+
+.cardA .number{
+    font-size: 35px;
+}
+
+.cardA .heading2{ 
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(35, 35, 35);
+}
+
+
+.pieChart, .barChart {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 40px;
+    background-color: white;
+    border-radius: 20px;
+    margin: 0px 30px 20px 30px;
+}
+
+
+.charts{
+    display: grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); 
+    width: 100%;
+    margin-top: 70px;
+    gap: 60px;
+    
+}
+
+.pieChart canvas, .barChart canvas {
+    width: 200px;   
+    height: 200px;  
+}
+
+.heading2{
+     align-self: flex-start; 
+     font-family: 'Roboto';
+}

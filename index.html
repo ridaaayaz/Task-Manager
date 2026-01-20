@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Organizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Iceberg&family=Sekuya&family=Luckiest+Guy&family=Rammetto+One&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="landing.css">
+</head>
+
+<body>
+    <div class="cover appearCover"></div>
+    <div class="content">
+        <div class="title appearBar"> ๋࣭⭑ Task Manager - simple & effective </div>
+        <h1 class="heading appear" id="head1">Master your tasks,</h1>
+        <h1 class="heading appear" id="head2">Boost your productivity.</h1>
+
+        <span class="subheading appear">
+            A task management app that helps you organize,</span>
+        <span class="subheading appear">prioritize, and accomplish your goals with ease. </span>
+        <br>
+        <button class="getStarted appear" onclick="location.href='dashboard.html'">Get Started &nbsp; &nbsp; ➝</button>
+    </div>
+
+    </div>
+
+
+
+
+    <script>
+        window.addEventListener("load", function () {
+            this.document.querySelector(".cover").classList.add("show");
+            document.querySelectorAll(".appear").forEach((el) => {
+                el.classList.add("show");
+            this.document.querySelector(".appearBar").classList.add("barShow")
+            })
+        })
+    </script>
+</body>
+
+</html>

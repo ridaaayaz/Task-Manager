@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Shadows+Into+Light&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="tasks.css">
+</head>
+
+<body>
+     <header>
+        <nav class="navBar">
+            <div class="logo">
+                <img src="images/logo.png" width="40px">
+                <h2><span class="task">Task</span><span class="manager"> Manager</span></h2>
+            </div>
+
+            <div class="btnsNavDiv">
+                <button id="Dashboard" class="btnsNav">🏠︎ Dashboard</button>
+                <button id="viewTasks" class="btnsNav Active">☑ Tasks</button>
+                <button id="Analytics" class="btnsNav" onclick="location.href='analytics.html'"> Analytics</button>
+                
+            </div>
+        </nav>
+    </header>
+    <div class="cover2">
+    <div class="headings appear">
+        <h1>Tasks</h1>
+        <h4>Create, manage, and track all your tasks in one place</h4>
+    </div>
+
+    <div class="flex">
+        <div class="searchTools">
+            <input type="search" id="search" name="search" placeholder="🔍︎ Search tasks...">
+            <select name='prior' class="dropdown" id="prior">
+                <option value="All priority" selected>All priority</option>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+
+            </select>
+            <select name='status' class="dropdown" id="statusFilter">
+                <option value="All Status" selected>All Status</option>
+                <option value="Pending">Pending</option>
+                <option value="Completed">Completed</option>
+
+            </select>
+        </div>
+
+        <button id="addTask">✚ &nbsp New Task</button>
+
+    </div>
+
+
+    <div class="modal-container appear" id="modal-container">
+        <div class="modal" id="modal">
+            <button type="button" id="closebtn">╳</button>
+            <h2 style="align-self: center;" class="formHeading">Add Task Form</h2>
+            <form id="addTaskForm">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+                <label for="description">Description</label>
+                <textarea name="description" id="description" rows="5"></textarea>
+
+                <div class="radio-buttons">
+                    <div style="display: flex; flex-direction: column;  gap: 10px;">
+                        <label>Priority</label>
+                        <select name='prior' class="dropdown" id="priorityForm" style="width: 165px" ;>
+                            <option id="LowOp" value="Low">Low</option>
+                            <option id="MedOp" value="Medium">Medium</option>
+                            <option id="HighOp" value="High">High</option>
+
+                        </select>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 10px;">
+                        <label>Status</label>
+
+                        <select name='status' class="dropdown" id="statusForm" style="width: 165px;">
+                            <option id="pendingOp" value="Pending">Pending</option>
+                            <option id="CompletedOp" value="Completed">Completed</option>
+
+                        </select>
+                    </div>
+                </div>
+                <label for="dueDate">Due Date</label>
+                <input type="date" id="dueDate" name="dueDate">
+                <br>
+                <div class="btnsDiv">
+                    <button type="submit" id="submitButton" class="button">Create Task</button>
+                    <button type="reset" id="resetButton" class="button">Reset</button>
+                </div>
+
+
+            </form>
+
+        </div>
+    </div>
+    <div id="taskList" class="appear"></div>
+</div>
+
+   
+    <script src="Tasks.js"></script>
+</body>
+
+</html>
